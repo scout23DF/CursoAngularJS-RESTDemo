@@ -8,7 +8,7 @@ var VeiculoSchema = new mongoose.Schema({
   numeroAnoModelo : Number,
   statusCor       : String,
   numeroPlaca     : String,
-  numeroRANAVAN   : String,  
+  numeroRENAVAN   : String,  
   valorRevendaFIPE: Number,
   qtdRevisoes     : Number,
   nomesMototistasList : [String]

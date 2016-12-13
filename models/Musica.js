@@ -6,6 +6,7 @@ var MusicaSchema = new mongoose.Schema({
   duracao                   : String,
   tipoEstilo                : String,
   dataComposicao            : Date,
+  dataLancamento            : Date,  
   valorLucro                : Number,
   statusSucesso             : Boolean,
   nomeAutorPrincipal        : String,

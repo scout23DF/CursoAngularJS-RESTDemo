@@ -9,6 +9,7 @@ var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
 var musica = require('./routes/musica');
 var veiculo = require('./routes/veiculo');
+var artista = require('./routes/artista');
 
 var mongoose = require('mongoose');
 
@@ -58,6 +59,7 @@ app.use('/usuario', usuario);
 app.use('/perfil', perfil);
 app.use('/musica', musica);
 app.use('/veiculo', veiculo);
+app.use('/artista', artista);
 
 
 
