@@ -6,9 +6,9 @@ var Artista = require('../models/Artista.js');
 
 /* GET /usuario Listagem de usuários. */
 router.get('/', function(req, res, next) {
-  Artista.find(function (err, pObjArtista) {
+  Artista.find(function (err, artista) {
     if (err) return next(err);
-    res.json(pObjArtista);
+    res.json(artista);
   });
 });
 
