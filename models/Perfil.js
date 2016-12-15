@@ -1,9 +1,10 @@
 var mongoose = require('mongoose');
 
 var PerfilSchema = new mongoose.Schema({
-  nome: String,
-  perfil:{
-  	 nome:String
+  nome : String,
+  permissoesList : [String],
+  perfil : {
+  	 nome : String
   }
 });
 
