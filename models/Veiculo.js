@@ -14,4 +14,4 @@ var VeiculoSchema = new mongoose.Schema({
   nomesMototistasList : [String]
 });
 
-module.exports = mongoose.model('Veiculo', VeiculoSchema);
+module.exports = mongoose.model('DKM-Veiculo', VeiculoSchema);

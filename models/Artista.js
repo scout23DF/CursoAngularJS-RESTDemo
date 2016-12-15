@@ -10,4 +10,4 @@ var ArtistaSchema = new mongoose.Schema({
   statusAtivo               : Boolean
 });
 
-module.exports = mongoose.model('Artista', ArtistaSchema);
+module.exports = mongoose.model('DKM-Artista', ArtistaSchema);

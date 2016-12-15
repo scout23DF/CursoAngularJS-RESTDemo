@@ -14,4 +14,4 @@ var MusicaSchema = new mongoose.Schema({
   textoLetraMusica          : String
 });
 
-module.exports = mongoose.model('Musica', MusicaSchema);
+module.exports = mongoose.model('DKM-Musica', MusicaSchema);
