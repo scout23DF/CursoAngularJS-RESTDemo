@@ -5,4 +5,4 @@ var PerfilSchema = new mongoose.Schema({
   permissoesList : [String]
 });
 
-module.exports = mongoose.model('Perfil-Dokmos', PerfilSchema);
+module.exports = mongoose.model('Perfil', PerfilSchema);
