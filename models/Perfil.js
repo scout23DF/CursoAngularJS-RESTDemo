@@ -5,4 +5,4 @@ var PerfilSchema = new mongoose.Schema({
   permissoesList : [String]
 });
 
-module.exports = mongoose.model('Perfil', PerfilSchema);
+module.exports = mongoose.model('DKM-Perfil', PerfilSchema);
