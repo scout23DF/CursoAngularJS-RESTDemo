@@ -2,10 +2,7 @@ var mongoose = require('mongoose');
 
 var PerfilSchema = new mongoose.Schema({
   nome : String,
-  permissoesList : [String],
-  perfil : {
-  	 nome : String
-  }
+  permissoesList : [String]
 });
 
-module.exports = mongoose.model('Perfil', PerfilSchema);
+module.exports = mongoose.model('Perfil-Dokmos', PerfilSchema);
