@@ -8,7 +8,7 @@ var UsuarioSchema = new mongoose.Schema({
   descricaoSenha : String,
   cep     : Number,
   endereco: {
-        numeroCEP : Number,
+        numeroCEP : String,
         descricaoLogradouro : String
   },
   perfil: {
