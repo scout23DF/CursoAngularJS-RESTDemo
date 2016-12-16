@@ -13,7 +13,7 @@ var verificadorAuthenticacao = function (req, res, next) {
             if (err) {
                 return res.status(403).send({
                     success: false,
-                    message: 'Acesso Negado! Opa... Parou, Parou... Enviou um Token Inválido, seu Asno!'
+                    message: 'Acesso Negado! Opa... Parou, Parou... Enviou um Token Inválido!'
                 });
             } else {
                 req.decoded = decoded;
@@ -23,7 +23,7 @@ var verificadorAuthenticacao = function (req, res, next) {
     } else {
         return res.status(403).send({
             success: false,
-            message: 'Acesso Negado, seu Imbecil! Kd o Token, zé Mané?'
+            message: 'Acesso Negado! Kd o Token, brother?'
         });
     }
 };
