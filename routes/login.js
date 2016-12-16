@@ -16,7 +16,7 @@ router.post('/', function (req, res, next) {
                     var vTokenGerado = jwt.sign(pUsuarioReturned, secretKey, {
                         expiresIn: "1 day"
                     });
-                    res.json({usuarioAutenticado: pUsuarioReturned, token: vTokenGerado});
+                    res.json({usuarioAutenticado: pUsuarioReturned, tokenGerado: vTokenGerado});
                 } else {
                     res.status(400).send('Login/Senha incorretos');
                 }
