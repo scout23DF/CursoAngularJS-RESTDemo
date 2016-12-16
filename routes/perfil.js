@@ -1,15 +1,20 @@
 var express = require('express');
 var router = express.Router();
+var verificadorAuthenticacao = require('./auth');
 
 var Perfil = require('../models/Perfil.js');
 
 /* GET /perfil Listagem de perfis. */
-router.get('/', function(req, res, next) {
+router.route('/').get(verificadorAuthenticacao, function(req, res, next) {
   Perfil.find(function (err, perfil) {
-    if (err) return next(err);
-    res.json(perfil);
+    if (err) {
+        return next(err);
+    } else {
+        res.json(perfil);
+    }
   });
 });
+
 
 /* POST /perfil Cadastro de perfil */
 router.post('/', function(req, res, next) {
