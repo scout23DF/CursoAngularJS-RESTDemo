@@ -3,8 +3,10 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 var routes = require('./routes/index');
+var login = require('./routes/login');
 var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
 var musica = require('./routes/musica');
@@ -55,6 +57,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', routes);
+app.use('/login', login);
 app.use('/usuario', usuario);
 app.use('/perfil', perfil);
 app.use('/musica', musica);
