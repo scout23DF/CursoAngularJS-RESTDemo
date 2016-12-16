@@ -6,12 +6,12 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 
 var routes = require('./routes/index');
-var login = require('./routes/login');
 var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
 var musica = require('./routes/musica');
 var veiculo = require('./routes/veiculo');
 var artista = require('./routes/artista');
+var login = require('./routes/login');
 
 var mongoose = require('mongoose');
 
@@ -44,12 +44,12 @@ app.use(cors());
 // // Add headers
 
 app.use('/', routes);
-app.use('/login', login);
 app.use('/usuario', usuario);
 app.use('/perfil', perfil);
 app.use('/musica', musica);
 app.use('/veiculo', veiculo);
 app.use('/artista', artista);
+app.use('/login', login);
 
 
 

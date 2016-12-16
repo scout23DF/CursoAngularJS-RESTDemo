@@ -1,14 +1,17 @@
 var express = require('express');
 var router = express.Router();
-var auth = require('./auth');
+var verificadorAuthenticacao = require('./auth');
 
 var Usuario = require('../models/Usuario.js');
 
 /* GET /usuario Listagem de usuários. */
-router.route('/').get(auth, function(req, res, next) {
-  Usuario.find(function (err, usuario) {
-    if (err) return next(err);
-    res.json(usuario);
+router.route('/').get(verificadorAuthenticacao, function(req, res, next) {
+  Usuario.find(function (pErr, pUsuarioReturned) {
+    if (pErr) {
+        return next(pErr);
+    } else {
+        res.json(pUsuarioReturned);
+    }
   });
 });
 
