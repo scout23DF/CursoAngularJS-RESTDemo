@@ -3,7 +3,7 @@ var jwt = require('jsonwebtoken');
 var secretKey = "R@tapl@nDoArr3bol";
 
 //middleware: auth
-var verificadorTokenAutenticacao = function (req, res, next) {
+var auth = function (req, res, next) {
 
     var token = req.body.token || req.query.token || req.headers['x-access-token'];
     
